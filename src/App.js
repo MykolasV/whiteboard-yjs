@@ -36,7 +36,7 @@ function App() {
             let shape = canvas.getObjects().find(obj => obj.key === key);
             canvas.remove(shape);
 
-            console.log("The shape was deleted.")
+            console.log("The shape was deleted.");
           }
         });
 
@@ -48,6 +48,7 @@ function App() {
       const provider = new WebsocketProvider('ws://localhost:1234', 'my-rommname', ydoc);
       provider.on('status', event => {
         console.log(event.status) // logs "connected" or "disconnected"
+        // console.log(provider);
       });
 
       // offline support
